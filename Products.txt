@@ -1,0 +1,1 @@
+[{"Id":1,"Name":"iPhone 12","Price":5000,"RegistrationDate":"2025-07-01T22:59:50.7083793-03:00"}]

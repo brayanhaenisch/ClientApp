@@ -73,8 +73,6 @@ public class ClientRepository
 
         ClientPrint(client);
 
-        Console.Write("Mostrei o client");
-
 
         Console.Write("Nome do cliente: ");
         var name = Console.ReadLine();
@@ -112,11 +110,7 @@ public class ClientRepository
         Console.Clear();
         Console.WriteLine("Clientes cadastrados: ");
         Console.Write(Environment.NewLine);
-        foreach (var c in clients)
-        {
-            ClientPrint(c);
-            Console.Write(Environment.NewLine);
-        }
+        clients?.ForEach(p => ClientPrint(p));
         Console.WriteLine("Menu [Enter]");
     }
 }

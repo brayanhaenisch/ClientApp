@@ -1,4 +1,5 @@
 using System.IO.Pipelines;
+using System.Net.WebSockets;
 using System.Text.Json.Nodes;
 using EmployerReg;
 
@@ -113,11 +114,7 @@ public class EmployerRepository
         Console.Clear();
         Console.WriteLine("Funcionários cadastrados: ");
         Console.Write(Environment.NewLine);
-        foreach (var c in employers)
-        {
-            EmployerPrint(c);
-            Console.Write(Environment.NewLine);
-        }
+        employers?.ForEach(y => EmployerPrint(y));
         Console.WriteLine("Menu [Enter]");
     }
 
